@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hammad - Portfolio</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    
+    <!-- Fixed Side Icons -->
+    <div class="fixed-side-icons left-side">
+        <a target="_blank" href="https://pk.linkedin.com/in/hammad-raziq" class="side-icon" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a target="_blank" href="https://github.com/Hammadraziq" class="side-icon" title="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+    </div>
+    
+    <div class="fixed-side-icons right-side">
+        <a href="mailto:hamadraziq30@gmail.com" class="side-icon" title="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a  href="#contact" class="side-icon" title="Message">
+            <i class="fas fa-comment"></i>
+        </a>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">Hammad</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certificates">Certificates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-palette"></i> Theme
+                        </a>
+                        <ul class="dropdown-menu theme-dropdown">
+                            <li><a class="dropdown-item theme-option" data-theme="dark" href="#"><i class="fas fa-moon"></i> Dark</a></li>
+                            <li><a class="dropdown-item theme-option" data-theme="light" href="#"><i class="fas fa-sun"></i> Light</a></li>
+                            <li><a class="dropdown-item theme-option" data-theme="red" href="#"><i class="fas fa-fire"></i> Red</a></li>
+                            <li><a class="dropdown-item theme-option" data-theme="yellow" href="#"><i class="fas fa-star"></i> Yellow</a></li>
+                            <li><a class="dropdown-item theme-option" data-theme="green" href="#"><i class="fas fa-leaf"></i> Green</a></li>
+                            <li><a class="dropdown-item theme-option" data-theme="blue" href="#"><i class="fas fa-water"></i> Blue</a></li>
+                            <li><a class="dropdown-item theme-option" data-theme="purple" href="#"><i class="fas fa-gem"></i> Purple</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <div class="profile-image mb-4">
+                        <img src="assets/icon-star-white.png" alt="Hammad" class="rounded-circle">
+                    </div>
+                    <h1 class="hero-title mb-3">Olá, sou Hammad</h1>
+                    <h2 class="hero-subtitle mb-4">BSSE Student, Problem Solver, Fullstack Developer</h2>
+                    <p class="hero-description mb-4">
+                        Merging logic and design to build full-stack web apps with Laravel, Vue.js, and frontend flair.
+                    </p>
+                    <div class="social-icons mb-4">
+                        <a target="_blank" href="https://pk.linkedin.com/in/hammad-raziq" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a target="_blank" href="https://www.behance.net/HammadRaziq" class="social-icon"><i class="fab fa-behance"></i></a>
+                        <a target="_blank" href="https://github.com/Hammadraziq" class="social-icon"><i class="fab fa-github"></i></a>
+                    </div>
+                    <a href="#portfolio" class="btn btn-primary btn-lg">View My Work</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <h2 class="section-title text-center mb-5">About Me</h2>
+                
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div class="about-content">
+                            <h4 class="mb-3">Senior Laravel Developer & Problem-Solver – BSSE Graduate</h4>
+                            <p class="mb-3">
+                                I’m passionate about building technology that solves real-world problems. With a strong foundation in software engineering and hands-on experience in Laravel, Vue.js, and modern web development, I thrive on creating clean, scalable, and user-focused applications.
+                            </p>
+                            <p class="mb-4">
+                                My journey has been fueled by curiosity, continuous learning, and a drive to improve. Whether working solo or collaborating with teams, I bring a problem-solving mindset and a full-stack perspective to everything I build.
+                            </p>
+                            
+                            <h5 class="mb-3">Languages I Speak</h5>
+                            <div class="tags mb-4">
+                                <span class="tag">English <span class="tag-badge fluent">Fluent</span></span>
+                                <span class="tag">Urdu <span class="tag-badge native">Native</span></span>
+                                <span class="tag">Pashto <span class="tag-badge native">Native</span></span>
+                            </div>
+                            
+                            <h5 class="mb-3">Programming Languages</h5>
+                            <div class="tags programming-tags">
+                                <span class="tag">C++ <span class="tag-badge years">3 Years</span></span>
+                                <span class="tag">HTML <span class="tag-badge years">2 Years</span></span>
+                                <span class="tag">CSS <span class="tag-badge years">2 Years</span></span>
+                                <span class="tag">Python <span class="tag-badge years">2 Years</span></span>
+                                <span class="tag">JS <span class="tag-badge years">1 Year</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-6 mb-3">
+                                <div class="feature-card">
+                                    <i class="fas fa-graduation-cap mb-3"></i>
+                                    <h6>Scholarships</h6>
+                                    <p>70% Merit-Based Scholarship Awarded for academic excellence during my BSSE degree.</p>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <div class="feature-card">
+                                    <i class="fas fa-crown mb-3"></i>
+                                    <h6>Leadership</h6>
+                                    <p>Leading by example through mentorship, clean code, and reliable delivery.</p>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <div class="feature-card">
+                                    <i class="fas fa-code mb-3"></i>
+                                    <h6>Technical Skills</h6>
+                                    <p>Proficient in Laravel, Vue.js, REST APIs, MySQL, and modern frontend technologies.</p>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <div class="feature-card">
+                                    <i class="fas fa-globe mb-3"></i>
+                                    <h6>Languages</h6>
+                                    <p>English, Urdu, Pashto.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="education-card mt-5">
+                    <h4 class="mb-3">Education</h4>
+                    <h5>Bachelor of Science in Software Engineering</h5>
+                    <p class="mb-2">Abasyn University</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+                    <h2 class="section-title text-center mb-3">Portfolio</h2>
+                    <p class="text-center mb-5">See my creative work across design and development platforms</p>
+                    
+                    <div class="row">
+                        <div class="col-lg-4 mb-4">
+                            <div class="portfolio-card">
+                                <div class="card-header">
+                                    <div class="card-icon-container">
+                                        <div class="card-icon">
+                                            <i class="fas fa-basketball-ball"></i>
+                                        </div>
+                                    </div>
+                                    <div class="card-title-section">
+                                        <h4>Dribbble</h4>
+                                        <h6 class="text-muted mb-3">Design Portfolio</h6>
+                                    </div>
+                                    <div class="card-status">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="portfolio-item">
+                                        <span class="item-title">Website Design</span>
+                                        <span class="item-subtitle">UI/UX</span>
+                                    </div>
+                                    <div class="portfolio-item">
+                                        <span class="item-title">Web Dashboard</span>
+                                        <span class="item-subtitle">Design System</span>
+                                    </div>
+                                    <div class="portfolio-item">
+                                        <span class="item-title">Brand Identity</span>
+                                        <span class="item-subtitle">Visual Design</span>
+                                    </div>
+                                </div>
+                                <div class="card-action">
+                                    <a href="https://dribbble.com/hammad-raziq" target="_blank" class="btn btn-danger">View Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 mb-4">
+                            <div class="portfolio-card">
+                                <div class="card-header">
+                                    <div class="card-icon-container">
+                                        <div class="card-icon">
+                                            <i class="fas fa-palette"></i>
+                                        </div>
+                                    </div>
+                                    <div class="card-title-section">
+                                        <h4>Behance</h4>
+                                        <h6 class="text-muted mb-3">Creative Design Projects</h6>
+                                    </div>
+                                    <div class="card-status">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="portfolio-item">
+                                        <span class="item-title">Brand Identity</span>
+                                        <span class="item-subtitle">Visual Design</span>
+                                    </div>
+                                    <div class="portfolio-item">
+                                        <span class="item-title">Product Design</span>
+                                        <span class="item-subtitle">UI/UX</span>
+                                    </div>
+                                    <div class="portfolio-item">
+                                        <span class="item-title">Web Dashboard</span>
+                                        <span class="item-subtitle">Design System</span>
+                                    </div>
+                                </div>
+                                <div class="card-action">
+                                    <a href="https://www.behance.net/HammadRaziq" target="_blank" class="btn btn-primary">View Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 mb-4">
+                            <div class="portfolio-card">
+                                <div class="card-header">
+                                    <div class="card-icon-container">
+                                        <div class="card-icon">
+                                            <i class="fas fa-code"></i>
+                                        </div>
+                                    </div>
+                                    <div class="card-title-section">
+                                        <h4>GitHub</h4>
+                                        <h6 class="text-muted mb-3">SE/Company Projects</h6>
+                                    </div>
+                                    <div class="card-status">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="portfolio-item">
+                                        <span class="item-title">Task Management System</span>
+                                        <span class="item-subtitle">Laravel</span>
+                                    </div>
+                                    <div class="portfolio-item">
+                                        <span class="item-title">SheenPay</span>
+                                        <span class="item-subtitle">Full Stack</span>
+                                    </div>
+                                    <div class="portfolio-item">
+                                        <span class="item-title">PriceOye</span>
+                                        <span class="item-subtitle">Full Stack</span>
+                                    </div>
+                                </div>
+                                <div class="card-action">
+                                    <a href="https://github.com/Hammadraziq" target="_blank" class="btn btn-success">View Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-section text-center mt-5">
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <div class="stat-item">
+                                    <h3 class="stat-number">5+</h3>
+                                    <p class="stat-label">design projects</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="stat-item">
+                                    <h3 class="stat-number">6+</h3>
+                                    <p class="stat-label">development projects</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="stat-item">
+                                    <h3 class="stat-number">4+</h3>
+                                    <p class="stat-label">AI-powered integrations</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates & Awards Section -->
+    <section id="certificates" class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+                    <h2 class="section-title text-center mb-3">Certificates & Awards</h2>
+                    <p class="text-center mb-5">Recognition of my skills and achievements across various domains</p>
+                    
+                    <div class="filter-buttons text-center mb-5">
+                        <button class="btn btn-outline-primary btn-sm filter-btn active" data-filter="all">All</button>
+                        <button class="btn btn-outline-primary btn-sm filter-btn" data-filter="internship">Internship</button>
+                        <button class="btn btn-outline-primary btn-sm filter-btn" data-filter="pseb">PSEB</button>
+                        <button class="btn btn-outline-primary btn-sm filter-btn" data-filter="project_management">Project Management</button>
+                        <button class="btn btn-outline-primary btn-sm filter-btn" data-filter="programming">Programming</button>
+                    </div>
+                    
+                    <div class="row" id="certificates-grid">
+                        <div class="col-lg-4 col-md-6 mb-4 certificate-item" data-category="internship">
+                            <div class="certificate-card" data-certificate="atlantis">
+                                <div class="card-icon mb-3">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h5>Atlantis Internship Completion</h5>
+                                <p class="text-muted mb-2">Atlantis</p>
+                                <p class="small">Internship completion certificate for Web Developer at Atlantis.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 col-md-6 mb-4 certificate-item" data-category="pseb">
+                            <div class="certificate-card" data-certificate="web_development">
+                                <div class="card-icon mb-3">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h5>Advanced Web Development Course PSEB</h5>
+                                <p class="text-muted mb-2">PSEB IT Industry Academia Bridge Program 2022</p>
+                                <p class="small">Earned certification after completing the full-stack web development course under PSEB IT Industry Academia Bridge Program.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 col-md-6 mb-4 certificate-item" data-category="project_management">
+                            <div class="certificate-card" data-certificate="foundation">
+                                <div class="card-icon mb-3">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h5>Foundations of Project Management</h5>
+                                <p class="text-muted mb-2">Google</p>
+                                <p class="small">Earned certification after completing the Foundations of Project Management course by Google, focused on project lifecycle, key roles, and core project management concepts.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-4 certificate-item" data-category="project_management">
+                            <div class="certificate-card" data-certificate="start_project">
+                                <div class="card-icon mb-3">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h5>Project Initiation: Starting a Successful Project</h5>
+                                <p class="text-muted mb-2">Google</p>
+                                <p class="small">Earned certification after completing the Project Initiation course by Google, focused on defining project goals, identifying stakeholders, and setting up project documentation.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-4 certificate-item" data-category="project_management">
+                            <div class="certificate-card" data-certificate="planning_project">
+                                <div class="card-icon mb-3">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h5>Project Planning: Putting It All Together</h5>
+                                <p class="text-muted mb-2">Google</p>
+                                <p class="small">Earned certification after completing the Project Planning course by Google, focused on creating project plans, managing risks, and setting timelines and milestones.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-4 certificate-item" data-category="project_management">
+                            <div class="certificate-card" data-certificate="running_project">
+                                <div class="card-icon mb-3">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h5>Project Execution: Running the Project</h5>
+                                <p class="text-muted mb-2">Google</p>
+                                <p class="small">Earned certification after completing the Project Execution course by Google, covering task management, quality assurance, and communication strategies during project implementation.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-4 certificate-item" data-category="project_management">
+                            <div class="certificate-card" data-certificate="agile">
+                                <div class="card-icon mb-3">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h5>Agile Project Management</h5>
+                                <p class="text-muted mb-2">Google</p>
+                                <p class="small">Earned certification after completing the Agile Project Management course by Google, focusing on Agile principles, Scrum methodology, and iterative project delivery techniques.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-4 certificate-item" data-category="project_management">
+                            <div class="certificate-card" data-certificate="capstone">
+                                <div class="card-icon mb-3">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h5>Capstone: Applying Project Management in the Real World</h5>
+                                <p class="text-muted mb-2">Google</p>
+                                <p class="small">Earned certification after completing the Project Management Capstone course by Google, focused on applying project management skills through real-world scenarios and case studies.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 col-md-6 mb-4 certificate-item" data-category="programming">
+                            <div class="certificate-card" data-certificate="frontend">
+                                <div class="card-icon mb-3">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h5>Introduction to Frontend</h5>
+                                <p class="text-muted mb-2">Coursera</p>
+                                <p class="small">Completed the HTML, CSS, and JavaScript for Web Developers course by Meta on Coursera.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 col-md-6 mb-4 certificate-item" data-category="programming">
+                            <div class="certificate-card" data-certificate="react">
+                                <div class="card-icon mb-3">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h5>React Basics Certificate of Achievement</h5>
+                                <p class="text-muted mb-2">Coursera</p>
+                                <p class="small">Completed the React Basics course on Coursera.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Modal -->
+    <div class="certificate-modal" id="certificateModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h3 id="modalTitle">Certificate Title</h3>
+            </div>
+            <div class="modal-body">
+                <div class="certificate-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Organization:</span>
+                        <span class="detail-value" id="modalOrganization">Organization Name</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Date:</span>
+                        <span class="detail-value" id="modalDate">2023</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Category:</span>
+                        <span class="detail-badge" id="modalCategory">Category</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Description:</span>
+                        <p class="detail-description" id="modalDescription">Certificate description goes here.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" target="_blank" class="btn btn-primary" id="viewCertificate">
+                    View Certificate <i class="fas fa-external-link-alt ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+                    <h2 class="section-title text-center mb-3">Experience</h2>
+                    <p class="text-center mb-5">My professional journey across various roles and industries</p>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h5>Senior Laravel Developer</h5>
+                                    <span class="company">PriceOye</span>
+                                    <span class="date">July 2023 - Present</span>
+                                    <span class="location">Islamabad, Pakistan</span>
+                                </div>
+                                <p class="mb-3">Leading backend development using Laravel to build scalable, high-performance APIs and web applications. Responsible for optimizing database queries, implementing business logic, integrating third-party services, and collaborating with cross-functional teams to deliver new features and maintain product stability.</p>
+                                <div class="tags">
+                                    <span class="tag">Laravel Architecture</span>
+                                    <span class="tag">Scalable API Design</span>
+                                    <span class="tag">Microservices</span>
+                                    <span class="tag">System Optimization</span>
+                                    <span class="tag">Database Performance Tuning</span>
+                                    <span class="tag">CI/CD Pipelines</span>
+                                    <span class="tag">Design Patterns</span>
+                                    <span class="tag">Team Mentorship</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h5>Laravel Developer</h5>
+                                    <span class="company">Atlantis BPO Solutions</span>
+                                    <span class="date">Oct 2022 - July 2023</span>
+                                    <span class="location">Islamabad, Pakistan</span>
+                                </div>
+                                <p class="mb-3">Developed AI solutions and contributed to machine learning projects. Worked on chatbot development and data analysis.</p>
+                                <div class="tags">
+                                    <span class="tag">Laravel</span>
+                                    <span class="tag">RESTful APIs</span>
+                                    <span class="tag">MySQL</span>
+                                    <span class="tag">Backend Development</span>
+                                    <span class="tag">API Integration</span>
+                                    <span class="tag">Eloquent ORM</span>
+                                    <span class="tag">Debugging & Optimization</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h5>PHP Web Developer</h5>
+                                    <span class="company">DevioTech</span>
+                                    <span class="date">sep 2021 - sep 2022</span>
+                                    <span class="location">Lahore, Punjab, Pakistan</span>
+                                </div>
+                                <p class="mb-3">PHP Web Developer with expertise in building dynamic and responsive web applications using core PHP, MySQL, and front-end technologies. Skilled in backend development, API integration, and database design with a focus on clean code, performance, and scalability. Proficient in debugging, optimizing queries, and delivering secure, maintainable applications.</p>
+                                <div class="tags">
+                                    <span class="tag">PHP</span>
+                                    <span class="tag">RESTful APIs</span>
+                                    <span class="tag">MySQL</span>
+                                    <span class="tag">Backend Development</span>
+                                    <span class="tag">API Integration</span>
+                                    <span class="tag">Debugging & Optimization</span>
+                                    <span class="tag">Authentication</span>
+                                    <span class="tag">Session Management</span>
+                                    <span class="tag">Responsive Design</span>
+                                    <span class="tag">Git</span>
+                                    <span class="tag">AJAX</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-section text-center mt-5">
+                        <div class="row">
+                            <div class="col-md-3 mb-3">
+                                <div class="stat-item">
+                                    <h3 class="stat-number">4+</h3>
+                                    <p class="stat-label">years in Laravel</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <div class="stat-item">
+                                    <h3 class="stat-number">4+</h3>
+                                    <p class="stat-label">years of experience</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <div class="stat-item">
+                                    <h3 class="stat-number">20+</h3>
+                                    <p class="stat-label">projects</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <div class="stat-item">
+                                    <h3 class="stat-number">10+</h3>
+                                    <p class="stat-label">clients</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+                    <h2 class="section-title text-center mb-3">Get In Touch</h2>
+                    <p class="text-center mb-5">Let's discuss your next project or just say hi!</p>
+                    
+                    <div class="row">
+                        <div class="col-lg-6 mb-4">
+                            <div class="contact-form">
+                                <h4 class="mb-4">Send me a message</h4>
+                                <form id="contactForm" method="post">
+                                    <div class="form-group mb-3">
+                                        <label for="name" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Your name" required>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="your.email@example.com" required>
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <label for="message" class="form-label">Message</label>
+                                        <textarea class="form-control" id="message" rows="5" placeholder="Tell me about your project or just say hello..." required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">
+                                        Send Message <i class="fas fa-paper-plane ms-2"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <div class="contact-info">
+                                <h4 class="mb-4">Let's connect</h4>
+                                <p class="mb-4">I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology and design. Feel free to reach out!</p>
+                                
+                                <div class="contact-cards mb-4">
+                                    <div class="contact-card">
+                                        <div class="contact-icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <div class="contact-details">
+                                            <span class="contact-label">Email</span>
+                                            <span class="contact-value">hamadraziq30@gmail.com</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="contact-card">
+                                        <div class="contact-icon">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                        <div class="contact-details">
+                                            <span class="contact-label">Location</span>
+                                            <span class="contact-value">Islamabad, Pakistan</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="contact-card">
+                                        <div class="contact-icon">
+                                            <i class="fas fa-phone"></i>
+                                        </div>
+                                        <div class="contact-details">
+                                            <span class="contact-label">Phone</span>
+                                            <span class="contact-value">03138661159</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="quick-links-card">
+                                    <h5 class="mb-3">Quick Links</h5>
+                                    <div class="quick-links">
+                                        <div class="row">
+                                            <div class="col-6 mb-2">
+                                                <a target="_blank" href="https://dribbble.com/hammad-raziq" class="quick-link-btn">Dribbble</a>
+                                            </div>
+                                            <div class="col-6 mb-2">
+                                                <a target="_blank" href="https://github.com/Hammadraziq" class="quick-link-btn">GitHub</a>
+                                            </div>
+                                            <div class="col-6 mb-2">
+                                                <a target="_blank" href="https://www.behance.net/HammadRaziq" class="quick-link-btn">Behance</a>
+                                            </div>
+                                            <div class="col-6 mb-2">
+                                                <a target="_blank" href="https://pk.linkedin.com/in/hammad-raziq" class="quick-link-btn">LinkedIn</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>&copy; 2024 Hammad. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/custom.js"></script>
+</body>
+</html> 
