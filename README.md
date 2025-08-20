@@ -1,4 +1,4 @@
-# Dyen Portfolio Website
+# Hammad Portfolio Website
 
 A modern, responsive portfolio website built with Bootstrap 5, featuring a dark theme with purple gradients and smooth animations.
 
@@ -161,7 +161,3 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 📞 Support
 
 If you have any questions or need help customizing the portfolio, please open an issue in the repository.
-
----
-
-**Note**: This is a recreation of the original website at https://dynestein.vercel.app using Bootstrap 5 and modern web technologies. The design and content are based on the original portfolio but have been rebuilt from scratch for educational purposes. 
