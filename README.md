@@ -1,4 +1,4 @@
-# Hammad Portfolio Website
+# Hammads Portfolio Website
 
 A modern, responsive portfolio website built with Bootstrap 5, featuring a dark theme with purple gradients and smooth animations.
 
