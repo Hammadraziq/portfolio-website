@@ -717,7 +717,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initThemeSwitcher();
 
     // Test backend connection on page load
-    testBackendConnection();
+    // testBackendConnection();
 
     console.log('Portfolio website initialized successfully!');
     
