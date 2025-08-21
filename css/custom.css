@@ -499,11 +499,33 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 15px;
     text-align: center;
     height: 100%;
+    min-height: 200px;
     transition: all 0.4s ease;
     border: 1px solid rgba(108, 92, 231, 0.3);
     box-shadow: 0 8px 32px rgba(108, 92, 231, 0.2);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Ensure feature card rows have equal heights */
+.row:has(.feature-card) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.row:has(.feature-card) > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+}
+
+.row:has(.feature-card) .feature-card {
+    flex: 1;
+    height: 100%;
+    min-height: 200px;
 }
 
 .feature-card::before {
@@ -1524,6 +1546,12 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 2rem;
     }
     
+    /* Ensure experience section is visible and responsive */
+    .timeline {
+        position: relative;
+        padding-left: 2rem;
+    }
+    
     .timeline::before {
         left: 20px;
     }
@@ -1543,23 +1571,93 @@ h1, h2, h3, h4, h5, h6 {
         right: auto;
     }
     
+    /* Ensure certificates section is visible and responsive */
+    .certificate-card {
+        margin-bottom: 1.5rem;
+        height: auto;
+        min-height: auto;
+    }
+    
+    .certificate-card .card-icon {
+        margin-bottom: 1rem;
+    }
+    
+    .certificate-card h5 {
+        font-size: 1.1rem;
+        line-height: 1.3;
+        margin-bottom: 0.75rem;
+    }
+    
+    .certificate-card p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    
+    .certificate-card .small {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
     .feature-card {
         margin-bottom: 1rem;
     }
     
-    .portfolio-card,
-    .certificate-card {
+    .portfolio-card {
         margin-bottom: 1rem;
     }
 }
 
+@media (max-width: 991px) {
+    /* Ensure sections are visible on tablets */
+    .section {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    #experience,
+    #certificates {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    .timeline,
+    .certificate-card {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+}
+
 @media (max-width: 576px) {
+    /* Fix body centering for small mobile devices */
+    body {
+        overflow-x: hidden;
+        text-align: center;
+    }
+    
+    .container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
     .hero-title {
         font-size: 2rem;
     }
     
     .section {
         padding: 60px 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .profile-image img {
@@ -1569,12 +1667,412 @@ h1, h2, h3, h4, h5, h6 {
     
     .social-icons {
         gap: 0.5rem;
+        justify-content: center;
+        display: flex;
     }
     
     .social-icon {
         width: 40px;
         height: 40px;
     }
+    
+    /* Additional mobile optimizations for experience and certificates */
+    .timeline {
+        padding-left: 1.5rem;
+        margin: 0 auto;
+    }
+    
+    .timeline-item {
+        margin-bottom: 2rem;
+    }
+    
+    .timeline-content {
+        padding: 1.5rem;
+    }
+    
+    .certificate-card {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .certificate-card h5 {
+        font-size: 1rem;
+        line-height: 1.3;
+    }
+    
+    .certificate-card p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
+    .certificate-card .small {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+    
+    /* Ensure all content is centered */
+    .row {
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    
+    .col-12,
+    .col-sm-6,
+    .col-md-6,
+    .col-lg-4,
+    .col-lg-6 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    /* Ensure feature cards maintain consistent heights */
+    .feature-card {
+        min-height: 180px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .feature-card i {
+        margin-bottom: 0.75rem;
+    }
+    
+    .feature-card h6 {
+        margin-bottom: 0.5rem;
+        flex-grow: 0;
+    }
+    
+    .feature-card p {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 3rem;
+    }
+}
+
+/* Responsive Grid and Layout Improvements */
+@media (max-width: 991px) {
+    /* Fix body centering and container alignment on tablets */
+    body {
+        overflow-x: hidden;
+    }
+    
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+    
+    /* Ensure proper grid behavior on tablets */
+    .row {
+        margin-left: -0.75rem;
+        margin-right: -0.75rem;
+    }
+    
+    .col-12,
+    .col-sm-6,
+    .col-md-6,
+    .col-lg-4,
+    .col-lg-6 {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+    
+    /* Center all content properly */
+    .section {
+        text-align: center;
+    }
+    
+    .section > .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+        /* Ensure feature cards maintain consistent heights on tablets */
+    .feature-card {
+        min-height: 200px;
+        height: 100% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+    }
+    
+    .feature-card i {
+        margin-bottom: 1rem;
+        flex-shrink: 0;
+    }
+    
+    .feature-card h6 {
+        margin-bottom: 0.75rem;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+    
+    .feature-card p {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 3.5rem;
+        margin: 0;
+    }
+    
+    /* Force equal heights for feature card rows */
+    .row:has(.feature-card) {
+        align-items: stretch !important;
+    }
+    
+    .row:has(.feature-card) > [class*="col-"] {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    /* Ensure filter buttons are visible and usable */
+    .filter-buttons {
+        margin-bottom: 2rem;
+    }
+    
+    .filter-buttons .d-flex {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .filter-buttons .btn {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+        margin: 0.25rem;
+    }
+    
+    /* Fix hero section centering */
+    .hero-section .container {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hero-section .row {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .hero-section .col-12 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Fix body centering and container alignment on mobile */
+    body {
+        overflow-x: hidden;
+    }
+    
+    .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+    
+    /* Mobile grid improvements */
+    .row {
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .col-12,
+    .col-sm-6,
+    .col-md-6,
+    .col-lg-4,
+    .col-lg-6 {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Stack all columns on mobile for better readability */
+    .col-md-6,
+    .col-lg-4,
+    .col-lg-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    /* Ensure all sections are properly centered */
+    .section {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .section > .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Fix specific section centering */
+    .about-section .row,
+    .portfolio-section .row,
+    .certificates-section .row,
+    .experience-section .row,
+    .contact-section .row {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Global Responsive Body and Container Fixes */
+@media (max-width: 991px) {
+    /* Ensure body content is properly centered */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Fix main container centering */
+    main, .main-content {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Ensure all sections are properly aligned */
+    section {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile-specific body fixes */
+    html, body {
+        overflow-x: hidden;
+        text-align: center;
+    }
+    
+    /* Ensure proper container behavior */
+    .container-fluid {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    
+    /* Fix any potential horizontal scrolling */
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* Feature Cards Consistent Heights for All Screen Sizes */
+@media (min-width: 1200px) {
+    .feature-card {
+        min-height: 220px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .feature-card i {
+        margin-bottom: 1.25rem;
+    }
+    
+    .feature-card h6 {
+        margin-bottom: 1rem;
+        flex-grow: 0;
+    }
+    
+    .feature-card p {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 4rem;
+    }
+}
+
+/* Ensure feature cards maintain consistent heights across all breakpoints */
+.feature-card {
+    min-height: 200px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.feature-card i {
+    flex-shrink: 0;
+}
+
+.feature-card h6 {
+    flex-shrink: 0;
+}
+
+.feature-card p {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Fallback for browsers that don't support :has() */
+.row .feature-card {
+    height: 100%;
+    min-height: 200px;
+}
+
+/* Force equal heights for feature card containers */
+.row:has(.feature-card),
+.row .feature-card {
+    align-items: stretch;
+}
+
+.row:has(.feature-card) > [class*="col-"],
+.row .feature-card {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure all feature cards in a row have the same height */
+.row:has(.feature-card) .feature-card,
+.row .feature-card {
+    flex: 1;
+    height: 100%;
+    min-height: 200px;
+    max-height: none;
 }
 
 /* Animation Classes */
@@ -1831,6 +2329,256 @@ html {
     box-shadow: 0 10px 25px rgba(108, 92, 231, 0.3);
 }
 
+/* Responsive Modal Design for Mobile and Tablets */
+@media (max-width: 991px) {
+    .certificate-modal {
+        padding: 15px;
+    }
+    
+    .modal-content {
+        max-width: 90%;
+        width: 90%;
+        padding: 1.5rem;
+        border-radius: 15px;
+    }
+    
+    .modal-header {
+        margin-bottom: 1rem;
+        padding-right: 2.5rem;
+    }
+    
+    .modal-header h3 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+    
+    .modal-body {
+        margin-bottom: 1.5rem;
+    }
+    
+    .detail-item {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+    
+    .detail-label {
+        min-width: auto;
+        font-size: 0.9rem;
+    }
+    
+    .detail-value {
+        font-size: 0.9rem;
+    }
+    
+    .detail-description {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .modal-footer .btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .certificate-modal {
+        padding: 10px;
+    }
+    
+    .modal-content {
+        max-width: 95%;
+        width: 95%;
+        padding: 1.25rem;
+        border-radius: 12px;
+    }
+    
+    .modal-header {
+        margin-bottom: 1rem;
+        padding-right: 2rem;
+    }
+    
+    .modal-header h3 {
+        font-size: 1.3rem;
+        line-height: 1.2;
+    }
+    
+    .modal-body {
+        margin-bottom: 1.25rem;
+    }
+    
+    .detail-item {
+        gap: 0.4rem;
+    }
+    
+    .detail-label {
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+    
+    .detail-value {
+        font-size: 0.85rem;
+    }
+    
+    .detail-description {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
+    .detail-badge {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.6rem;
+    }
+    
+    .modal-footer .btn {
+        padding: 0.5rem 1.25rem;
+        font-size: 0.85rem;
+        width: 100%;
+    }
+    
+    .modal-close {
+        top: 0.75rem;
+        right: 0.75rem;
+        width: 35px;
+        height: 35px;
+    }
+    
+    .modal-close i {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .certificate-modal {
+        padding: 5px;
+    }
+    
+    .modal-content {
+        max-width: 98%;
+        width: 98%;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+    
+    .modal-header {
+        margin-bottom: 0.75rem;
+        padding-right: 1.75rem;
+    }
+    
+    .modal-header h3 {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+    
+    .modal-body {
+        margin-bottom: 1rem;
+    }
+    
+    .detail-item {
+        gap: 0.3rem;
+    }
+    
+    .detail-label {
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    
+    .detail-value {
+        font-size: 0.8rem;
+    }
+    
+    .detail-description {
+        font-size: 0.8rem;
+        line-height: 1.3;
+    }
+    
+    .detail-badge {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+    }
+    
+    .modal-footer .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+        width: 100%;
+    }
+    
+    .modal-close {
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .modal-close i {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        max-width: 100%;
+        width: 100%;
+        padding: 0.75rem;
+        border-radius: 8px;
+        margin: 0 5px;
+    }
+    
+    .modal-header {
+        margin-bottom: 0.5rem;
+        padding-right: 1.5rem;
+    }
+    
+    .modal-header h3 {
+        font-size: 1.1rem;
+        line-height: 1.2;
+    }
+    
+    .modal-body {
+        margin-bottom: 0.75rem;
+    }
+    
+    .detail-item {
+        gap: 0.25rem;
+    }
+    
+    .detail-label {
+        font-size: 0.75rem;
+    }
+    
+    .detail-value {
+        font-size: 0.75rem;
+    }
+    
+    .detail-description {
+        font-size: 0.75rem;
+        line-height: 1.3;
+    }
+    
+    .detail-badge {
+        font-size: 0.65rem;
+        padding: 0.15rem 0.4rem;
+    }
+    
+    .modal-footer .btn {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.75rem;
+        width: 100%;
+    }
+    
+    .modal-close {
+        top: 0.4rem;
+        right: 0.4rem;
+        width: 28px;
+        height: 28px;
+    }
+    
+    .modal-close i {
+        font-size: 0.75rem;
+    }
+}
+
 /* Make certificate cards clickable */
 .certificate-card {
     cursor: pointer;
@@ -2010,10 +2758,90 @@ button:hover ~ .custom-cursor::before,
     top: 50%;
     transform: translateY(-50%);
     z-index: 1000;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
+}
+
+/* Ensure navbar is properly aligned on mobile */
+@media (max-width: 991px) {
+    .navbar .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+    
+    .navbar-brand {
+        margin-left: 0;
+    }
+    
+    .navbar-nav {
+        margin-left: auto;
+    }
+    
+    /* Force navbar to maintain horizontal layout */
+    .navbar {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        flex-wrap: nowrap !important;
+    }
+    
+    .navbar-brand {
+        display: flex !important;
+        align-items: center !important;
+        margin-right: auto !important;
+        flex-shrink: 0 !important;
+        order: 1 !important;
+    }
+    
+    .navbar-toggler {
+        display: block !important;
+        margin-left: auto !important;
+        order: 2 !important;
+        flex-shrink: 0 !important;
+    }
+    
+    .navbar-collapse {
+        order: 3 !important;
+        width: 100% !important;
+        flex-basis: auto !important;
+        flex-grow: 0 !important;
+        margin-top: 1rem !important;
+    }
+    
+    /* Ensure container maintains horizontal layout for brand and toggler */
+    .navbar .container {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        flex-wrap: nowrap !important;
+        justify-content: space-between !important;
+    }
+    
+    /* Force navbar-collapse to appear on new line */
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    
+    .navbar-collapse.collapsing,
+    .navbar-collapse.show {
+        display: block !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        background: var(--card-bg) !important;
+        backdrop-filter: blur(10px) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+        border-radius: 10px !important;
+        margin-top: 0.5rem !important;
+        padding: 1rem !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        z-index: 1000 !important;
+    }
 }
 
 .fixed-side-icons.left-side {
@@ -2082,10 +2910,10 @@ button:hover ~ .custom-cursor::before,
     transition: all 0.3s ease;
 }
 
-/* Hide side icons on mobile */
-@media (max-width: 768px) {
+/* Hide side icons on mobile and tablets */
+@media (max-width: 991px) {
     .fixed-side-icons {
-        display: none;
+        display: none !important;
     }
 } 
 
