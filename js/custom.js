@@ -468,6 +468,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Simulate opening portfolio
             setTimeout(() => {
+                window.open(link.href, "_blank");
                 console.log(`Opening ${platform} portfolio`);
             }, 1000);
         });
