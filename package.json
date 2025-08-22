@@ -1,0 +1,29 @@
+{
+  "name": "portfolio-contact-api",
+  "version": "1.0.0",
+  "description": "Serverless contact form API for portfolio website",
+  "main": "api/contact.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "netlify dev",
+    "build": "echo 'No build step required'"
+  },
+  "keywords": [
+    "serverless",
+    "nodemailer",
+    "contact-form",
+    "portfolio",
+    "netlify"
+  ],
+  "author": "Hammad",
+  "license": "MIT",
+  "dependencies": {
+    "nodemailer": "^6.9.7"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

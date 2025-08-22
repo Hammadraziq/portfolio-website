@@ -1,0 +1,8 @@
+# Ignore environment file
+.env
+
+# Ignore vendor directory
+.node_modules
+
+# Local Netlify folder
+.netlify

@@ -2075,6 +2075,103 @@ h1, h2, h3, h4, h5, h6 {
     max-height: none;
 }
 
+/* Contact Form Notifications */
+.contact-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    max-width: 400px;
+    animation: slideInRight 0.3s ease-out;
+}
+
+.contact-notification-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-notification-success {
+    background: rgba(39, 174, 96, 0.95);
+    color: white;
+    border-color: rgba(39, 174, 96, 0.3);
+}
+
+.contact-notification-error {
+    background: rgba(231, 76, 60, 0.95);
+    color: white;
+    border-color: rgba(231, 76, 60, 0.3);
+}
+
+.contact-notification-warning {
+    background: rgba(243, 156, 18, 0.95);
+    color: white;
+    border-color: rgba(243, 156, 18, 0.3);
+}
+
+.contact-notification-info {
+    background: rgba(52, 152, 219, 0.95);
+    color: white;
+    border-color: rgba(52, 152, 219, 0.3);
+}
+
+.contact-notification i {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.contact-notification span {
+    flex-grow: 1;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.contact-notification-close {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.contact-notification-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Form validation styles */
+.form-control.is-invalid {
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 0.2rem rgba(231, 76, 60, 0.25);
+}
+
+.invalid-feedback {
+    display: block;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: #e74c3c;
+}
+
 /* Animation Classes */
 .fade-in {
     opacity: 0;

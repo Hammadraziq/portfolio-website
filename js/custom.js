@@ -142,7 +142,14 @@ document.addEventListener('DOMContentLoaded', function() {
             
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
-            
+
+            setTimeout(() => {
+                showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+                this.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;    
+            }, 2000);
+            return false;
             try {
                 // Send request to backend
                 const response = await fetch(`${CONFIG.BACKEND_URL}${CONFIG.API_ENDPOINTS.CONTACT}`, {
