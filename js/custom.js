@@ -675,7 +675,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const html = document.documentElement;
         
         // Load saved theme from localStorage
-        const savedTheme = localStorage.getItem('selectedTheme') || 'dark';
+        const savedTheme = localStorage.getItem('selectedTheme') || 'purple';
         html.setAttribute('data-theme', savedTheme);
         
         // Function to update active theme in dropdown
