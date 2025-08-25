@@ -1,7 +1,6 @@
 [build]
   functions = "api"
   publish = "."
-  SECRETS_SCAN_OMIT_PATHS = "index.html"
 
 [functions]
   directory = "api"
