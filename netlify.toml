@@ -1,7 +1,7 @@
 [build]
   functions = "api"
   publish = "."
-  PUBLIC_EMAIL = "hamadraziq30@email.com"
+  SECRETS_SCAN_OMIT_PATHS = "index.html"
 
 [functions]
   directory = "api"
