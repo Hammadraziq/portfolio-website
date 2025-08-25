@@ -1,6 +1,7 @@
 [build]
   functions = "api"
   publish = "."
+  PUBLIC_EMAIL = "hamadraziq30@email.com"
 
 [functions]
   directory = "api"

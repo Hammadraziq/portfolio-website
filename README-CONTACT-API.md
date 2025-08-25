@@ -32,7 +32,7 @@ RECIPIENT_EMAIL = "recipient@example.com"
 ```
 
 **For Gmail users:**
-- Use `smtp.gmail.com` as host
+- Use `your-smtp-host-here` as host
 - Use port `587`
 - Enable 2-factor authentication
 - Generate an "App Password" (not your regular password)
