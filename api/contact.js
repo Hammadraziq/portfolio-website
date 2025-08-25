@@ -8,8 +8,8 @@ const SMTP_PASS = process.env.SMTP_PASS;
 const RECIPIENT_EMAIL = process.env.RECIPIENT_EMAIL || SMTP_USER;
 
 // Create transporter
-const createTransporter = () => {
-  return nodemailer.createTransporter({
+const createTransport = () => {
+  return nodemailer.createTransport({
     host: SMTP_HOST,
     port: SMTP_PORT,
     secure: false, // true for 465, false for other ports
@@ -122,7 +122,7 @@ exports.handler = async (event, context) => {
     }
 
     // Create transporter
-    const transporter = createTransporter();
+    const transporter = createTransport();
 
     // Verify transporter configuration
     await transporter.verify();

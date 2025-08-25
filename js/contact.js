@@ -7,7 +7,7 @@ class ContactFormHandler {
     constructor() {
         this.form = document.getElementById('contactForm');
         this.submitButton = this.form?.querySelector('button[type="submit"]');
-        this.originalButtonText = this.submitButton?.textContent || 'Send Message';
+        this.originalButtonText = this.submitButton?.innerHTML || 'Send Message';
         
         this.init();
     }
@@ -135,10 +135,6 @@ class ContactFormHandler {
 
         // Show loading state
         this.setLoadingState(true);
-        this.showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-        this.form.reset();
-        this.clearAllErrors();
-        this.setLoadingState(false);
         
         try {
             // Send to API
@@ -198,26 +194,45 @@ class ContactFormHandler {
     }
 
     showNotification(message, type = 'info') {
+        // Remove existing notifications
+        const existingNotifications = document.querySelectorAll('.notification');
+        existingNotifications.forEach(notification => {
+            notification.classList.add('hide');
+            setTimeout(() => notification.remove(), 300);
+        });
+        
         // Create notification element
         const notification = document.createElement('div');
-        notification.className = `contact-notification contact-notification-${type}`;
+        notification.className = `notification notification-${type}`;
         notification.innerHTML = `
             <div class="notification-content">
-                <i class="fas fa-${this.getNotificationIcon(type)}"></i>
+                <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i>
                 <span>${message}</span>
-                <button class="notification-close" onclick="this.parentElement.parentElement.remove()">
-                    <i class="fas fa-times"></i>
-                </button>
+                <button class="notification-close">&times;</button>
             </div>
         `;
-
-        // Add to page
+        
         document.body.appendChild(notification);
-
-        // Auto-remove after 5 seconds
+        
+        // Animate in
         setTimeout(() => {
-            if (notification.parentElement) {
-                notification.remove();
+            notification.classList.add('show');
+        }, 100);
+        
+        // Close button functionality
+        const closeBtn = notification.querySelector('.notification-close');
+        closeBtn.addEventListener('click', () => {
+            notification.classList.remove('show');
+            notification.classList.add('hide');
+            setTimeout(() => notification.remove(), 300);
+        });
+        
+        // Auto remove after 5 seconds
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.classList.remove('show');
+                notification.classList.add('hide');
+                setTimeout(() => notification.remove(), 300);
             }
         }, 5000);
     }

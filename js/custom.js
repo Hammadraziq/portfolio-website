@@ -115,74 +115,74 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Contact form handling
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', async function(e) {
-            e.preventDefault();
+    // const contactForm = document.getElementById('contactForm');
+    // if (contactForm) {
+    //     contactForm.addEventListener('submit', async function(e) {
+    //         e.preventDefault();
             
-            // Get form data
-            const name = this.querySelector('input[type="text"]').value.trim();
-            const email = this.querySelector('input[type="email"]').value.trim();
-            const message = this.querySelector('textarea').value.trim();
+    //         // Get form data
+    //         const name = this.querySelector('input[type="text"]').value.trim();
+    //         const email = this.querySelector('input[type="email"]').value.trim();
+    //         const message = this.querySelector('textarea').value.trim();
             
-            // Simple validation
-            if (!name || !email || !message) {
-                showNotification('Please fill in all fields.', 'error');
-                return;
-            }
+    //         // Simple validation
+    //         if (!name || !email || !message) {
+    //             showNotification('Please fill in all fields.', 'error');
+    //             return;
+    //         }
             
-            if (!isValidEmail(email)) {
-                showNotification('Please enter a valid email address.', 'error');
-                return;
-            }
+    //         if (!isValidEmail(email)) {
+    //             showNotification('Please enter a valid email address.', 'error');
+    //             return;
+    //         }
             
-            // Update button state
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
+    //         // Update button state
+    //         const submitBtn = this.querySelector('button[type="submit"]');
+    //         const originalText = submitBtn.innerHTML;
             
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            submitBtn.disabled = true;
+    //         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    //         submitBtn.disabled = true;
 
-            setTimeout(() => {
-                showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-                this.reset();
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;    
-            }, 2000);
-            return false;
-            try {
-                // Send request to backend
-                const response = await fetch(`${CONFIG.BACKEND_URL}${CONFIG.API_ENDPOINTS.CONTACT}`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        name: name,
-                        email: email,
-                        message: message
-                    })
-                });
+    //         setTimeout(() => {
+    //             // showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+    //             this.reset();
+    //             submitBtn.innerHTML = originalText;
+    //             submitBtn.disabled = false;    
+    //         }, 2000);
+    //         return false;
+    //         try {
+    //             // Send request to backend
+    //             const response = await fetch(`${CONFIG.BACKEND_URL}${CONFIG.API_ENDPOINTS.CONTACT}`, {
+    //                 method: 'POST',
+    //                 headers: {
+    //                     'Content-Type': 'application/json',
+    //                 },
+    //                 body: JSON.stringify({
+    //                     name: name,
+    //                     email: email,
+    //                     message: message
+    //                 })
+    //             });
                 
-                const result = await response.json();
+    //             const result = await response.json();
                 
-                if (result.success) {
-                    showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-                    this.reset();
-                } else {
-                    showNotification(`Error: ${result.error}`, 'error');
-                }
+    //             if (result.success) {
+    //                 showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+    //                 this.reset();
+    //             } else {
+    //                 showNotification(`Error: ${result.error}`, 'error');
+    //             }
                 
-            } catch (error) {
-                console.error('Error sending message:', error);
-                showNotification('Failed to send message. Please check your connection and try again.', 'error');
-            } finally {
-                // Reset button state
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-            }
-        });
-    }
+    //         } catch (error) {
+    //             console.error('Error sending message:', error);
+    //             showNotification('Failed to send message. Please check your connection and try again.', 'error');
+    //         } finally {
+    //             // Reset button state
+    //             submitBtn.innerHTML = originalText;
+    //             submitBtn.disabled = false;
+    //         }
+    //     });
+    // }
 
     // Email validation function
     function isValidEmail(email) {
