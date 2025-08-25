@@ -25,11 +25,10 @@ npm install
 Create a `.env` file in your project root (for local development):
 
 ```env
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_USER=your-email@gmail.com
-SMTP_PASS=your-app-password
-RECIPIENT_EMAIL=your-email@gmail.com
+SMTP_HOST = "your-smtp-host-here"
+SMTP_USER = "your-smtp-user-here"
+SMTP_PASS = "your-smtp-pass-here"
+RECIPIENT_EMAIL = "recipient@example.com"
 ```
 
 **For Gmail users:**
@@ -143,26 +142,10 @@ Make sure your form has the correct ID and name attributes:
 
 ### Gmail
 ```env
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_USER=your-email@gmail.com
-SMTP_PASS=your-app-password
-```
-
-### Outlook/Hotmail
-```env
-SMTP_HOST=smtp-mail.outlook.com
-SMTP_PORT=587
-SMTP_USER=your-email@outlook.com
-SMTP_PASS=your-password
-```
-
-### Custom SMTP Server
-```env
-SMTP_HOST=mail.yourdomain.com
-SMTP_PORT=587
-SMTP_USER=contact@yourdomain.com
-SMTP_PASS=your-password
+SMTP_HOST = "your-smtp-host-here"
+SMTP_USER = "your-smtp-user-here"
+SMTP_PASS = "your-smtp-pass-here"
+RECIPIENT_EMAIL = "recipient@example.com"
 ```
 
 ## Troubleshooting

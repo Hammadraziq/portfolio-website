@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer');
 
 // Environment variables for SMTP configuration
-const SMTP_HOST = process.env.SMTP_HOST || 'smtp.gmail.com';
+const SMTP_HOST = process.env.SMTP_HOST || 'SMTP_HOST_HERE';
 const SMTP_PORT = process.env.SMTP_PORT || 587;
 const SMTP_USER = process.env.SMTP_USER;
 const SMTP_PASS = process.env.SMTP_PASS;
