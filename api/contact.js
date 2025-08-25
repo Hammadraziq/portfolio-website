@@ -3,10 +3,13 @@ const nodemailer = require('nodemailer');
 // Environment variables for SMTP configuration
 const SMTP_HOST = process.env.SMTP_HOST || 'SMTP_HOST_HERE';
 const SMTP_PORT = process.env.SMTP_PORT || 587;
-const SMTP_USER = process.env.SMTP_USER;
+const SMTP_USER = 'hamadraziq30@gmail.com';
 const SMTP_PASS = process.env.SMTP_PASS;
-const RECIPIENT_EMAIL = process.env.RECIPIENT_EMAIL || SMTP_USER;
-
+const RECIPIENT_EMAIL = SMTP_USER;
+console.log(SMTP_HOST);
+console.log(SMTP_PORT);
+console.log(SMTP_USER);
+console.log(RECIPIENT_EMAIL);
 // Create transporter
 const createTransport = () => {
   return nodemailer.createTransport({
